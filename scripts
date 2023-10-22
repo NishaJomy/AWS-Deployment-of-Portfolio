@@ -1,0 +1,22 @@
+commands to deploy portfolio websites in AWS
+---------------------------------------------
+
+Step1: Launch EC2 Instance
+Step2: Connect to running instance
+Step3:copy public IP Adress
+Step4:follow the commands in commantline
+sudo su -
+yum update -y
+yum install -y httpd
+systemctl status httpd
+mkdir aws_assg3
+cd aws_assg3
+wget https://github.com/NishaJomy/Nisha-George-Portfolio
+ls -lrt
+wget https://github.com/NishaJomy/Nisha-George-Portfolio/archive/refs/heads/main.zip
+ls -lrt
+unzip master.zip
+ls -lrt
+systemctl status httpd
+systemctl enable httpd
+systemctl start httpd
